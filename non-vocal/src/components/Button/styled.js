@@ -32,6 +32,7 @@ export const ImageButton = styled(ButtonBase)(({ theme }) => ({
     bottom: 0,
     backgroundSize: 'cover',
     backgroundPosition: 'center 40%',
+    backgroundImage: `url(${help})`
   });
   
   export const Image = styled('span')(({ theme }) => ({

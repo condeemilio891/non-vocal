@@ -7,7 +7,7 @@ import Typography from '@mui/material/Typography';
 
 const images = [
   {
-    url: 'images/help.jpg',
+    url: process.env.PUBLIC_URL+'./images/help.jpg',
     title: 'Help',
     width: '40%',
   },
@@ -36,7 +36,7 @@ export default function ButtonBases() {
           >
             <ImageSrc style={{ backgroundImage: `url(${image.url})` }} />
             <ImageBackdrop className="MuiImageBackdrop-root" />
-            <Image>
+            <Image style={{ backgroundImage: `url(${image.url})` }}>
               <Typography
                 component="span"
                 variant="subtitle1"
