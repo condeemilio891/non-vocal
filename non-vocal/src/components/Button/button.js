@@ -9,7 +9,7 @@ const images = [
   {
     url: process.env.PUBLIC_URL+'./images/help.jpg',
     title: 'Help',
-    width: '40%',
+    width: '30%',
   },
   {
     url: '/static/images/buttons/burgers.jpg',
@@ -40,7 +40,7 @@ export default function ButtonBases() {
               <Typography
                 component="span"
                 variant="subtitle1"
-                color="inherit"
+                color="black"
                 sx={{
                   position: 'relative',
                   p: 4,
