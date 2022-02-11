@@ -5,7 +5,7 @@ import help from "./images/help.jpg"
 
 export const ImageButton = styled(ButtonBase)(({ theme }) => ({
     position: 'relative',
-    height: 200,
+    height: 250,
     [theme.breakpoints.down('sm')]: {
       width: '100% !important', // Overrides inline-style
       height: 100,
@@ -45,7 +45,7 @@ export const ImageButton = styled(ButtonBase)(({ theme }) => ({
     alignItems: 'center',
     justifyContent: 'center',
     color: theme.palette.common.white,
-    backgroundImage: "url('./images/help.jpg')",
+ 
   }));
   
   export const ImageBackdrop = styled('span')(({ theme }) => ({
@@ -57,6 +57,7 @@ export const ImageButton = styled(ButtonBase)(({ theme }) => ({
     backgroundColor: theme.palette.common.black,
     opacity: 0.4,
     transition: theme.transitions.create('opacity'),
+    
   }));
   
   export const ImageMarked = styled('span')(({ theme }) => ({

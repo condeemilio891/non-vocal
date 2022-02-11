@@ -1,8 +1,9 @@
 import * as React from 'react';
 import { ImageButton,ImageSrc,Image,ImageBackdrop,ImageMarked } from './styled';
 import Box from '@mui/material/Box';
-
+import help from '../../sounds/Help.mp3'
 import Typography from '@mui/material/Typography';
+import useSound from 'use-sound'
 
 
 const images = [
@@ -10,11 +11,12 @@ const images = [
     url: process.env.PUBLIC_URL+'./images/help.jpg',
     title: 'Help',
     width: '30%',
+    sound: process.env.PUBLIC_URL+'./sounds/Help.mp3', 
   },
   {
-    url: '/static/images/buttons/burgers.jpg',
+    url: process.env.PUBLIC_URL+'./images/toilet2.png',
     title: 'Burgers',
-    width: '30%',
+    width: '27%',
   },
   {
     url: '/static/images/buttons/camera.jpg',
@@ -24,6 +26,13 @@ const images = [
 ];
 
 export default function ButtonBases() {
+
+  let audio = new Audio(help)
+
+  const start = () => {
+    audio.play()
+  }
+
     return (
       <Box sx={{ display: 'flex', flexWrap: 'wrap', minWidth: 300, width: '100%' }}>
         {images.map((image) => (
@@ -36,7 +45,7 @@ export default function ButtonBases() {
           >
             <ImageSrc style={{ backgroundImage: `url(${image.url})` }} />
             <ImageBackdrop className="MuiImageBackdrop-root" />
-            <Image style={{ backgroundImage: `url(${image.url})` }}>
+            <Image  onClick={start} style={{ backgroundImage: `url(${image.url})` }}>
               <Typography
                 component="span"
                 variant="subtitle1"
